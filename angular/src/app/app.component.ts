@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Task } from '../shared/model';
+import { Task } from '../../../shared/model';
 import { repo } from 'remult';
 
 @Component({

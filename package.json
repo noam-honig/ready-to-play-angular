@@ -2,11 +2,14 @@
   "name": "ready-to-play-angular",
   "version": "0.0.0",
   "scripts": {
+    "dev": "concurrently \"npm run dev-node\" \"cd angular && npm run dev\"",
+    "install": "cd angular && npm install",
     "dev-node": "tsx watch server"
   },
   "private": true,
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
+    "concurrently": "^8.2.2",
     "express": "^4.19.2",
     "remult": "^0.26.13",
     "sqlite3": "^5.1.7",

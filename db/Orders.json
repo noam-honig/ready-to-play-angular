@@ -1,0 +1,42 @@
+[
+  {
+    "customer": "Hoeger, Barton and Haag",
+    "id": 1
+  },
+  {
+    "customer": "Osinski - Howe",
+    "id": 2
+  },
+  {
+    "customer": "Ratke, Gleason and Johns",
+    "id": 3
+  },
+  {
+    "customer": "Bartell, Toy and Cremin",
+    "id": 4
+  },
+  {
+    "customer": "Bashirian Inc",
+    "id": 5
+  },
+  {
+    "customer": "Murphy, Buckridge and Smith",
+    "id": 6
+  },
+  {
+    "customer": "Cole Group",
+    "id": 7
+  },
+  {
+    "customer": "Prohaska, Heaney and Fritsch",
+    "id": 8
+  },
+  {
+    "customer": "Hahn and Sons",
+    "id": 9
+  },
+  {
+    "customer": "Ruecker - Jaskolski",
+    "id": 10
+  }
+]

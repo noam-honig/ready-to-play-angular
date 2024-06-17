@@ -1,18 +1,26 @@
-import { Entity, Fields } from 'remult';
+import { Entity, Fields, Relations } from 'remult';
 
-@Entity('tasks', {
+@Entity('Orders', {
   allowApiCrud: true,
 })
-export class Task {
-  @Fields.cuid()
-  id = '';
-
+export class Order {
+  @Fields.autoIncrement()
+  id = 0;
   @Fields.string()
-  title = '';
-
-  @Fields.boolean()
-  completed = false;
-
-  @Fields.createdAt()
-  createdAt?: Date;
+  customer = '';
+  @Relations.toMany(() => OrderDetails, 'orderId')
+  details?: OrderDetails[];
+}
+@Entity('OrderDetails', {
+  allowApiCrud: true,
+})
+export class OrderDetails {
+  @Fields.autoIncrement()
+  id = 0;
+  @Fields.integer()
+  orderId = 0;
+  @Fields.string()
+  product = '';
+  @Fields.integer()
+  quantity = 0;
 }

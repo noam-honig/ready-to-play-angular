@@ -1,5 +1,12 @@
 <ul>
-  @for(task of tasks;track task.id){
-  <li>{{ task.title }}</li>
+  @for(order of orders;track order.id){
+  <li>
+    ({{ order.id }}) {{ order.customer }}
+    <ul>
+      @for(detail of order.details;track detail.id){
+      <li>{{ detail.product }} - {{ detail.quantity }}</li>
+      }
+    </ul>
+  </li>
   }
 </ul>

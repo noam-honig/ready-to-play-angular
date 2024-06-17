@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Task } from '../../../shared/model';
+import { Order } from '../../../shared/model';
 import { repo } from 'remult';
 
 @Component({
@@ -12,10 +12,14 @@ import { repo } from 'remult';
 })
 export class AppComponent {
   title = 'ready-to-play-angular';
-  tasks: Task[] = [];
+  orders: Order[] = [];
   ngOnInit() {
-    repo(Task)
-      .find()
-      .then((x) => (this.tasks = x));
+    repo(Order)
+      .find({
+        include: {
+          details: true,
+        },
+      })
+      .then((x) => (this.orders = x));
   }
 }
